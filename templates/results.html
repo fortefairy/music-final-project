@@ -1,0 +1,56 @@
+<!doctype html>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link href="https://fonts.googleapis.com/css?family=Quicksand|Playfair+Display|" rel="stylesheet">
+<header><h1>Interactive Artist Search</h1></header>
+<h2 class='artist'>{{name}}</h2>
+<div class="artist-info">
+    <br>
+    <a href="{{artist_url}}">Last FM profile</a>
+    <h3>Information</h3>
+    <h4>Tracks</h4>
+    <ol>
+    {% for track in top_tracks %}
+    <li>{{track}}</li>
+    {% endfor %}
+    </ol>
+    <br>
+    <h4>Albums</h4>
+    <ol>
+    {% for album in top_albums %}
+    <li>{{album}}</li>
+    {% endfor %}
+    </ol>
+    <br>
+    <h4>Tags</h4>
+    <ol>
+    {% for tag in top_tags[0:10] %}
+    <li>{{tag}}</li>
+    {% endfor %}
+    </ol>
+    <br>
+    <h4>Playlists</h4>
+    <ol>
+    {% for playlist, link in playlists.items() %}
+    <li><a href="{{link}}">{{playlist}}</a></li>
+    {% endfor %}
+    </ol>
+    <h4>Charts</h4>
+    <ol>
+    {% for chart in top_tags_chart %}
+    <li>{{chart[0]}} is {{chart[1]}} in {{chart[2]}} chart</li>
+    {% endfor %}
+    </ol>
+    <br>
+    <h4>Similar Artists</h4>
+    <ol>
+    {% for artist, link in similar.items() %}
+    <li><a href="{{link}}">{{artist}}</a></li>
+    {% endfor %}
+    </ol>
+</div>
+<div class='return'>
+<p>You can either return to the search page and continue searching for artists or you can exit the program to get a summary of your searches along with similar artists.</p>
+<p><a href="/">Return to search</a></p>
+<p><a href="/summary">Exit and Get Summary</a></p>
+</p>
+</div>

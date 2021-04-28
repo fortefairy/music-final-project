@@ -1,0 +1,18 @@
+<!doctype html>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link href="https://fonts.googleapis.com/css?family=Quicksand|Playfair+Display|" rel="stylesheet">
+<header><h1>Interactive Artist Search</h1></header>
+<main>
+<h2>Choose Which Artist</h2> 
+<p>From the dropdown menu, choose which artist you'd like to learn more about.</p>
+<div class='search'>
+<form action='/display_results', method='POST'>
+    <select name='artist_list', id='artist_list'>
+        {% for artist, id in artists.items() %}
+        <option value="{{ artist }}"> {{artist}} </option>
+    {% endfor %}
+    </select>
+    <input type='submit'/>
+</form>
+</div>   
+</main>

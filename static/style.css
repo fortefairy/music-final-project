@@ -1,0 +1,90 @@
+header {
+    margin-top: 0px;
+    height: 10%;
+    background-color: rgba(0, 0, 0, 0.945);
+    border-style: none none double none;
+    border-width: 7px;
+    border-color: white;
+}
+
+h1 {
+    color: #ba0000;
+    text-align: center;
+    text-shadow: -1px 0 black, 0 1px black, px 0 black, 0 -1px black;
+    margin-top: 0;
+    font-size: 25px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+
+}
+
+h2 {
+    text-align: center;
+}
+body {
+    margin: 0;
+    background-color: white;
+    font-family: Barlow,Open Sans,Lucida Grande,Helvetica Neue,Helvetica,Arial,Sans-serif;
+}
+
+main {
+    background-color: rgba(56, 0, 0, 0.493);
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 15%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.artist {
+    margin-top: 5%;
+    background-color: rgb(121, 121, 121);
+    color: black;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.artist-info {
+    background-color: lightgray;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+.search {
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.return {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+table, th, td {
+    border: 1px solid black;
+  }
+
+table {
+    border-collapse: collapse;
+
+  }
+
+th {
+    text-align: left;
+    padding: 10px;
+    background-color: rgb(121, 121, 121);
+}
+
+td {
+    padding: 5px;
+}

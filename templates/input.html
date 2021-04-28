@@ -1,0 +1,15 @@
+<!doctype html>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link href="https://fonts.googleapis.com/css?family=Quicksand|Playfair+Display|" rel="stylesheet">
+
+<body>
+    <header><h1>Interactive Artist Search</h1></header>
+    <main>
+        <h2>Search for an Artist</h2>
+    <div class="search">
+    <p>Hello, and welcome to the interactive artist search! <br>You can type in a search in the search button to get information about the
+    artist.
+</p>
+<form action='/handle_form', method='POST'><p>Enter an artist to begin your search</p><input name='artist_name', type='text'><input type='submit'/></form>
+</div></main>
+</body>

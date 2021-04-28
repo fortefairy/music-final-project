@@ -1,0 +1,20 @@
+<!doctype html>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link href="https://fonts.googleapis.com/css?family=Quicksand|Playfair+Display|" rel="stylesheet">
+<header><h1>Interactive Artist Search</h1></header>
+<h2>Summary of Your Results</h2>
+<div class='artist-info'>
+<table>
+    <tr>
+    <th>Artist Name</th>
+    <th>Last FM Url</th>
+    </tr>
+    {% for row in results %}
+    <tr>
+      <td>{{row[0]}}</td>  
+      <td><a href='{{row[1]}}'>Profile</a></td>
+    </tr>
+    {% endfor %}
+
+</table>
+</div>
